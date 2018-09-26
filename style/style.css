@@ -1,0 +1,225 @@
+html, body, .content{
+
+    min-height: 100vh
+}
+html{
+    background-image: linear-gradient(to bottom right, #180cac, #d054e4);
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    min-height: 100vh;
+    min-width: 300px;
+    overflow-x: hidden;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+
+    position: relative;
+ 
+ }
+ 
+ .wallpaper {
+ 
+    display: block;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    position: fixed;
+    background-image: url("../pictures/austria.jpg");
+    background-size: cover;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: all 2s;
+    transition-delay: 0.5s;
+ }
+
+ .wallpaper.is-loaded{
+    opacity: 0.2;
+    transform: scale(1); 
+
+ }
+
+.picture-image{
+border-radius: 50%;
+animation-name: picImage;
+animation-duration: 1s;
+animation-timing-function: cubic-bezier(0, 0.5, 0.25, 1.25);
+animation-fill-mode: both;
+}
+
+@keyframes picImage {
+    from {
+      opacity: 0;
+      transform: scale(1.2) translateY(-1rem);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+.about{
+    max-width: 26rem;
+}
+
+.name{
+font-size: 2.25rem;
+line-height: 1.125;
+margin-bottom: 0.5rem;
+}
+
+.job{
+color: #ffe479;
+font-size: 0.75rem;
+}
+
+.description{
+font-size: 1.5rem;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media(min-width: 768px){
+    .content {
+        flex-direction: row-reverse;
+    }
+    /*taisykles tik mobile*/
+}
+
+svg{
+    max-width: 20px;
+}
+.hr {
+    background-color: #ff470f;
+    border: none;
+    content: "";
+    height: 1px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    transform-origin: center left;
+    width: 4rem;
+}
+
+
+.social{
+    display: flex;
+    margin-top: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.social li{
+height: 2rem;
+margin-right: 0.5rem;
+text-align: center;
+width: 2rem;
+
+    display: inline-block;
+    width: 20px;
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+    
+}
+
+.social a {
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+    height: 2rem;
+    justify-content: center;
+    opacity: 0.5;
+    transition-property: opacity, transform;
+    width: 2rem;
+    will-change: opacity, transform;
+  }
+  
+  .social a:hover {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+  
+  .social a:active {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+.social svg{
+    max-width:20px;
+    color: white;
+}
+
+@keyframes slideUp {
+
+    from {
+    opacity: 0;
+    transform: translateY(1rem);
+    }
+   
+    to {
+    opacity: 1;
+    transform: translateY(0);
+   
+    }
+   }
+
+.contact{
+display: inline-block;
+margin-top: 1.5rem;
+vertical-align: top;
+}
+
+.job, .button{
+font-family: "Montserrat", "Quicksand", sans-serif;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+}
+
+
+.button{
+background-color: #fff;
+border-radius: 290486px;
+box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+color: #9013fe;
+display: inline-block;
+font-size: 0.875rem;
+line-height: 1;
+padding: 1.25em 2em;
+text-shadow: none;
+transition-property: box-shadow, transform;
+user-select: none;
+vertical-align: top;
+white-space: nowrap;
+will-change: box-shadow, transform;
+}
+
+/*Animation*/
+@keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.name {
+    animation-delay: 100ms;
+}
+.name {
+    animation-name: slideDown;
+  }
+  
